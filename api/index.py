@@ -18,7 +18,8 @@ class Request(BaseModel):
     regions: list[str]
     threshold_ms: float
 
-@app.post("/api")
+@app.post("/")
+
 def analyze(req: Request):
     result = {}
     for region in req.regions:
